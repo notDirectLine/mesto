@@ -1,0 +1,15 @@
+.element__button {
+  min-width: 22px;
+  height: 19px;
+  padding: 0;
+  border: none;
+  background: none;
+  background-repeat: no-repeat;
+  background-image: url(../../../images/Group.svg);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.element__button:hover {
+  opacity: 0.5;
+}
