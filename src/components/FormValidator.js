@@ -54,6 +54,5 @@ export default class FormValidator {
   }
   resetValidation() {
     this._toggleButtonState()
-    this._checkInputValidity()
   }
 }

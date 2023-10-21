@@ -1,9 +1,9 @@
 export default class Card {
-  constructor(data, templateSelector, handleOpenPhoto) {
-    this._name = data.name;
-    this._link = data.link;
+  constructor({name, link}, templateSelector, handleCardClick) { 
+    this._name = name;
+    this._link = link;
     this._templateSelector = templateSelector;
-    this._handleOpenPhoto = handleOpenPhoto;
+    this._handleCardClick = handleCardClick;
   }
   _getTemplate() {
     const cardElement = document.querySelector(this._templateSelector).content.querySelector('.element').cloneNode(true);
@@ -38,7 +38,7 @@ export default class Card {
     });
 
     this._cardImage.addEventListener('click', () => {
-      this._handleOpenPhoto(this._link, this._name);
+      this._handleCardClick(this._link, this._name);
     })
   }
 }
